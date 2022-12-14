@@ -30,8 +30,52 @@
 -->
 <script>
   "use strict";
-
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  let a = +prompt(`Введите число a`)
+  let b = +prompt(`Введите число b`)
+  let c = prompt(`Выбирете математическое действие:`)
+  
+  // определяем математическое действие 
+  function mymove() {
+    if (c === "-"){
+      return myminus(a, b);
+    } else if ( c === "+") {
+      return myplus(a, b);
+    } else if (c === "*") {
+      return mymulti(a, b);
+    } else if (c === "/"){
+      return mydivid(a, b);
+    }
+  }
+  
+  // деление
+  function mydivid () {
+    if (a >  b) {
+      return a / b;
+    } else if (a < b) {
+      return b /a;
+    } else if (a < 0 && b > 0) {
+      return b / a;
+    }
+  }
+  // умножение
+  function mymulti () {
+    return a * b
+  }
+  // сложение
+  function myplus () {
+    return a + b
+  }
+  // вычитание
+  function myminus() {
+    if (a > b){
+      return console.log(a - b)
+    } else if (a < b) {
+      return console.log(b - a)
+    }
+  }
+  console.log(mymove(a, b))
+  alert(mymove(a, b))
+  
 </script>
 </body>
 </html>
