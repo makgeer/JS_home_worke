@@ -25,12 +25,18 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
-  function declinationOfNumber(count, one, two, five) {
-
+  function declinationOfNumber(applesNumber, one, two, five) {
+    if (applesNumber === 1){
+    return  one
+  } else if (applesNumber === 2 || applesNumber === 3 || applesNumber === 4){
+    return  two
+  } else if (applesNumber === 5) {
+    return  five
+  }  
   }
 
   // Число яблок, можно пробовать поставить свое целое, положительное число.
-  const applesNumber = 5;
+  let applesNumber = 2;
   // Получаем от функции одно из слов "яблоко", "яблока" или "яблок".
   const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
   // Выводим корректную строку, например:
